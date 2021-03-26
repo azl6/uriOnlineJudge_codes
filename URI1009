@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		String nome = scan.next();
+		double fixo = scan.nextDouble();
+		double vendido = scan.nextDouble();
+		double comissao = vendido * 0.15;
+		
+		System.out.printf("TOTAL = R$ %.2f%n", fixo + comissao);
+	
+
+	}
+	}
