@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int code1 = scan.nextInt();
+		int units1 = scan.nextInt();
+		double priceUnit1 = scan.nextDouble();
+		double produto1 = units1*priceUnit1;
+		
+		int code2 = scan.nextInt();
+		int units2 = scan.nextInt();
+		double priceUnit2 = scan.nextDouble();
+		double produto2 = units2*priceUnit2;
+		
+		System.out.printf("VALOR A PAGAR: R$ %.2f%n", produto1 + produto2 );
+
+		}
+	}
