@@ -1,0 +1,31 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main {
+	
+    public static void main(String[] args) {
+    	
+    	Scanner sc = new Scanner(System.in);
+    	
+    	int x,y,a,b;
+    	x=sc.nextInt();
+    	y=sc.nextInt();
+    	
+    	a=Math.max(x, y);
+    	b=Math.min(x, y);
+    	
+    	if(x > y) {
+    		if(x%y == 0 ) {
+    			System.out.println("Sao Multiplos");
+    		}else {
+    			System.out.println("Nao sao Multiplos");
+    		}
+    	}else if(y > x) {
+    		if(y%x == 0 ) {
+    			System.out.println("Sao Multiplos");
+    		}else {
+    			System.out.println("Nao sao Multiplos");
+    		}		
+    	}    		    	
+    	}    
+		} 
