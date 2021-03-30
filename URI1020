@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int ageDays = sc.nextInt();
+		
+		int years = ageDays/365;
+		int restoYearsInDays = ageDays - years*365;
+		
+		int months = restoYearsInDays/30;
+		int restoMonthsInDays = restoYearsInDays - months*30;
+		
+		int days = restoMonthsInDays;
+		
+		System.out.println(years + " ano(s)");
+		System.out.println(months + " mes(es)");
+		System.out.println(days + " dia(s)");
+		 
+	}
+
+}
