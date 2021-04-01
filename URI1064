@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.lang.StringBuilder;
+
+public class Main {
+ 
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        
+        int soma=0;
+        double valorFinal=0;
+        
+        for (int i = 0; i < 6; i++) {
+            double num = sc.nextDouble();
+            if (num>0) {
+                soma++;
+                valorFinal+=num;
+            }
+        }
+        System.out.println(soma+" valores positivos");
+        System.out.printf("%.1f%n",valorFinal/soma);
+  
+    }
+}
