@@ -1,0 +1,49 @@
+import java.util.Scanner;
+import java.lang.Math;
+import java.lang.StringBuilder;
+
+public class Main {
+ 
+    public static void main(String[] args){
+        //QUESTAO B DO CT CAMP 2
+        Scanner sc = new Scanner(System.in);
+        
+       
+        int tests = sc.nextInt();
+        
+        for(int i=0;i<tests;i++){
+            
+        int qtdDima=0;
+        String mine = sc.next();
+        String corrected = mine.replace(".", "");
+        
+        StringBuilder sb = new StringBuilder(corrected); 
+        
+        for(int j=0;j<corrected.length();j++){
+            
+            int tamanho = corrected.length();
+            
+            if(corrected.equals("><") || corrected.equals("<<") || corrected.equals(">>") ){
+                break;
+            }
+            if(j+1==tamanho){
+                break;
+            }
+            char selected1=corrected.charAt(j);
+            char selected2=corrected.charAt(j+1);
+            
+            if(selected1=='<' && selected2=='>'){
+                qtdDima++;
+                sb.deleteCharAt(j);
+                sb.deleteCharAt(j);
+                corrected = sb.toString();
+                j=0;
+            }
+        }
+            if(corrected.startsWith("<>")){
+                qtdDima++;
+            }
+            System.out.println(qtdDima);
+        }
+      }
+    }
