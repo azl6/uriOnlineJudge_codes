@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.lang.StringBuilder;
+import java.math.BigInteger;
+
+public class Main {
+ 
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+
+        int posicaoFixa=0;
+        int inicial=0;
+        int posicao=0;
+        for (int i = 0; i < 100; i++) {
+            int lido = sc.nextInt();
+            posicao++;
+            
+            if(lido > inicial){
+                inicial = lido;
+                posicaoFixa=posicao;
+            }
+        }
+        System.out.println(inicial);
+        System.out.println(posicaoFixa);
+        
+    }
+}
