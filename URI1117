@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class Main {
+ 
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        double soma=0;
+        int contador=0;
+        
+        while(sc.hasNext()){
+            double lida = sc.nextDouble();
+            if (lida>=0.0 && lida<= 10.0) {
+                soma+=lida;
+                contador++;
+                
+                if (contador==2){
+                    break;
+                }
+            } else{
+                System.out.println("nota invalida");
+            }  
+       }   
+        double media = soma/2;
+        System.out.printf("media = %.2f%n",media);
+    } 
+}
