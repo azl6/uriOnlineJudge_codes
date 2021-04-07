@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class Main {
+ 
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        
+        
+        while(sc.hasNext()){
+            int lido1 = sc.nextInt();
+            int lido2 = sc.nextInt();
+            
+            if (lido1==0||lido2==0){
+                break;
+            }else{
+                if (lido1>0 && lido2>0) {
+                    System.out.println("primeiro");
+                }else if(lido1<0 && lido2>0){
+                    System.out.println("segundo");
+                }else if(lido1<0 && lido2<0){
+                    System.out.println("terceiro");
+                }else if(lido1>0 && lido2<0){
+                    System.out.println("quarto");
+                }
+  
+            }
+            
+        }
+     
+}
+}
