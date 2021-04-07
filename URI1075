@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main { 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num,conta;
+        num = sc.nextInt();
+        
+        for(int contador=1;contador<=10000;contador++){
+            if(contador%num == 2){
+                System.out.println(contador);
+            }
+        }
+        } 
+        }
