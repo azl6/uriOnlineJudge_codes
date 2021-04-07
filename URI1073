@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.lang.StringBuilder;
+import java.math.BigInteger;
+
+public class Main {
+ 
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        BigInteger lido = sc.nextBigInteger();
+        BigInteger dois = new BigInteger("2");        
+        String lida = lido.toString();
+        int limit = Integer.valueOf(lida);
+        int inicial = 2;
+      
+        for (int i = 1; i <= limit; i++) {
+
+            if(i%2==0){
+                String convert = String.valueOf(i); 
+                BigInteger ala = new BigInteger(convert); 
+                System.out.println(i + "^" + inicial + " = " + ala.pow(2) );
+                ala.add(dois);
+            }
+            
+        }
+    }
+}
