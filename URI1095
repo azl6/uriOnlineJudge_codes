@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Main { 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int j,i;
+        i = 1;
+
+        for(j=60;j>=0;j=j-5){
+            System.out.println("I=" + i + " " + "J=" + j);
+            i=i+3;
+            }
+        }
+        } 
