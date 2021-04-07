@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class Main {
+ 
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        int tests = sc.nextInt();
+        
+        for (int i = 0; i < tests; i++) {
+            int num1 = sc.nextInt();
+            int num2 = sc.nextInt();
+            int soma=0;
+            
+        
+              for (int j = Math.min(num1,num2)+1; j < Math.max(num1, num2); j++) {
+                if (j%2!=0) {
+                    soma+=j;
+            }  
+        }
+              System.out.println(soma);
+    } 
+}
+}
