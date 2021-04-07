@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int value1 = sc.nextInt();
+        int value2 = sc.nextInt();
+        int soma = 0;
+        
+        for (int i = Math.min(value1, value2) + 1; i < Math.max(value2, value1) ; i++){
+            
+              if(i%2 != 0){
+                soma+=i;           
+        }
+        } 
+        System.out.println(soma);
+    }
+}
