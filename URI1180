@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.lang.StringBuilder;
+import java.math.BigInteger;
+
+public class Main {
+ 
+    public static void main(String[] args){
+           
+         Scanner sc = new Scanner(System.in);
+         int number = sc.nextInt();
+         int array[] = new int[number];
+         for (int i = 0; i < array.length; i++) {
+             array[i]=sc.nextInt();  
+        }
+         int smol = array[0];
+         int position = 0;
+         for (int i = 1; i < array.length; i++) {
+             if (array[i]<smol) {
+                 smol=array[i];
+                 position=i;
+             }
+        }
+         System.out.println("Menor valor: " + smol);
+         System.out.println("Posicao: " + position);
+    }
+}
