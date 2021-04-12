@@ -1,0 +1,52 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main{
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        boolean bol = true,bol2=true;
+        
+        while(bol){
+            double x=-1,y=-1;
+            
+            while  (x < 0 || x > 10 || y < 0 || y > 10){
+              
+            if(bol2==true){
+            x = sc.nextDouble();
+            }
+            if(x < 0 || x > 10){
+                System.out.println("nota invalida");
+                continue;
+            }else{
+                bol2=false;
+            }
+            
+            y = sc.nextDouble();   
+            if(y < 0 || y > 10){
+                System.out.println("nota invalida");
+            }else{
+                break;
+            }
+            }
+            double media = (x+y)/2;
+            System.out.printf("media = %.2f%n", media);
+            
+  
+            int confirma;
+            
+            while(true){
+                System.out.println("novo calculo (1-sim 2-nao)");
+                confirma = sc.nextInt();
+                if (confirma == 1 || confirma == 2) {
+                    break;
+                }
+            }
+            if (confirma == 2) {
+                return;
+            }else if(confirma == 1){
+                bol2 =true;
+            }
+        } 
+    }
+}
