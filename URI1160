@@ -1,0 +1,41 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main{
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int times = sc.nextInt();
+        int popCity1, popCity2;
+        double cresc1, cresc2;
+        
+        for (int i = 0; i < times; i++) {
+            
+            popCity1 = sc.nextInt();
+            popCity2 = sc.nextInt();
+            cresc1 = sc.nextDouble();
+            cresc2 = sc.nextDouble();
+            int anos=0;
+            
+            while(true){
+                
+                popCity1+=(cresc1/100)*popCity1;
+                popCity2+=(cresc2/100)*popCity2;
+                anos++;
+                
+                String pop1 = String.valueOf(popCity1);
+                String pop2 = String.valueOf(popCity2);
+
+                if(anos > 100){
+                    System.out.println("Mais de 1 seculo.");
+                    break;
+                }
+                if (popCity1 > popCity2){
+                    System.out.println(anos + " anos.");
+                    break;
+                }
+            } 
+        }
+      }
+    }
