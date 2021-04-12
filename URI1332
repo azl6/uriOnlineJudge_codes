@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.lang.StringBuilder;
+
+public class Main {
+ 
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        int tests = sc.nextInt();
+        String word[] = {"one","two"};
+        
+        for(int i=0;i<tests;i++){
+        String lida = sc.next();
+        int letrasOne,letrasTwo;
+        letrasOne=0;
+        letrasTwo=0;
+        
+        if(lida.length() == 5){
+            System.out.println("3");
+        }else{
+            
+            for (int k = 0; k < 2; k++) {
+                for (int l = 0; l < lida.length(); l++) {
+                    char selected = lida.charAt(l);
+                    
+                    if(k == 0){
+                        if(selected == word[k].charAt(l)){
+                            letrasOne++;
+                        }
+                    }else{
+                        if(selected == word[k].charAt(l)){
+                            letrasTwo++;
+               }
+              }
+             }    
+                
+           }
+            if(letrasOne > letrasTwo){
+                System.out.println("1");
+            }else{
+                System.out.println("2");
+            }
+          }
+         }
+        }
+       }
