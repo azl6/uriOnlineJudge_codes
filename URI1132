@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main{
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int i = sc.nextInt();
+        int j = sc.nextInt();
+        int inicial=0;
+        
+        for (int k = Math.min(i,j); k <= Math.max(i, j); k++){
+            if (k%13!=0){
+                inicial+=k;
+            } 
+        }
+        System.out.println(inicial);  
+    }
+}
