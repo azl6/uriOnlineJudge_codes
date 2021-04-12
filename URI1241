@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main{
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int tests = sc.nextInt();
+        sc.nextLine();
+        
+        for (int i = 0; i < tests; i++) {
+            
+            
+            String lida = sc.nextLine();
+            int index = lida.indexOf(" ");
+            String part1 = lida.substring(0,index);
+            String part2 = lida.substring(index+1,lida.length());
+            
+            if(part2.length() > part1.length()){
+                System.out.println("nao encaixa");
+                continue;
+            }
+            int size = part2.length();
+            
+            String finais1 = part1.substring(part1.length()-size,part1.length());
+            if (finais1.equals(part2)){
+                System.out.println("encaixa");
+            }else{
+                System.out.println("nao encaixa");
+            }
+        }
+      }
+    }
