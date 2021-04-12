@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main { 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int testes = sc.nextInt();
+    
+    for(int contador = 1; contador<=testes;contador++){
+        String jogadaSheldon = sc.next();
+        String jogadaRaj = sc.next();
+        System.out.print("Caso #" + contador + ": ");
+        if(jogadaSheldon.equals("tesoura") && jogadaRaj.equals("papel") ||
+                jogadaSheldon.equals("papel") && jogadaRaj.equals("pedra") || 
+                jogadaSheldon.equals("pedra") && jogadaRaj.equals("lagarto") || 
+                jogadaSheldon.equals("lagarto") && jogadaRaj.equals("Spock") || 
+                jogadaSheldon.equals("Spock") && jogadaRaj.equals("tesoura") || 
+                jogadaSheldon.equals("tesoura") && jogadaRaj.equals("lagarto") || 
+                jogadaSheldon.equals("lagarto") && jogadaRaj.equals("papel") || 
+                jogadaSheldon.equals("papel") && jogadaRaj.equals("Spock") || 
+                jogadaSheldon.equals("Spock") && jogadaRaj.equals("pedra") || 
+                jogadaSheldon.equals("pedra") && jogadaRaj.equals("tesoura")){ 
+            System.out.println("Bazinga!"); 
+            
+            }else if(jogadaSheldon.equals("papel") && jogadaRaj.equals("tesoura") ||
+                jogadaSheldon.equals("pedra") && jogadaRaj.equals("papel") || 
+                jogadaSheldon.equals("lagarto") && jogadaRaj.equals("pedra") || 
+                jogadaSheldon.equals("Spock") && jogadaRaj.equals("lagarto") || 
+                jogadaSheldon.equals("tesoura") && jogadaRaj.equals("Spock") || 
+                jogadaSheldon.equals("lagarto") && jogadaRaj.equals("tesoura") || 
+                jogadaSheldon.equals("papel") && jogadaRaj.equals("lagarto") || 
+                jogadaSheldon.equals("Spock") && jogadaRaj.equals("papel") || 
+                jogadaSheldon.equals("pedra") && jogadaRaj.equals("Spock") || 
+                jogadaSheldon.equals("tesoura") && jogadaRaj.equals("pedra")){ 
+                System.out.println("Raj trapaceou!");
+                
+            }else if(jogadaSheldon.equals(jogadaRaj)){
+                System.out.println("De novo!");
+            }
+        }
+    }
+}
