@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Main {
+ 
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        
+        while(sc.hasNext()){
+            String empty="";
+            int counter = 2;
+            String lida = sc.nextLine();
+            
+            for (int i = 0; i < lida.length(); i++) {
+                char selected = lida.charAt(i);
+                if(selected==' '){
+                    empty+=selected;
+                }else{
+                    if(counter%2==0){
+                     counter++;
+                     String cortar = lida.substring(i,i+1);
+                     cortar=cortar.toUpperCase();
+                     empty+=cortar;
+                    }else{
+                     counter++;
+                     String cortar = lida.substring(i,i+1);
+                     cortar=cortar.toLowerCase();
+                     empty+=cortar;
+                    }   
+                }
+            }
+            System.out.println(empty);
+        }
+    } 
+}
